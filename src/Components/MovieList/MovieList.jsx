@@ -3,9 +3,9 @@ import { Link } from 'react-router-dom';
 export default function MovieList({ movies }) {
   return (
     <ul>
-      {movies.map(movie => {
-        <li key={movie.id}>
-          <Link>{movie.origanal_tietle}</Link>
+      {movies.map(({ id }) => {
+        <li key={id}>
+          <Link>{`/movies/${id}`}</Link>
         </li>;
       })}
     </ul>
