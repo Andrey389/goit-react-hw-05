@@ -1,8 +1,9 @@
-import { useEffect, useState } from 'react';
+import { lazy, useEffect, useState } from 'react';
 import { getTrendingmovies } from '../../Api/Api';
-import MovieList from '../../Components/MovieList/MovieList';
 import Loader from '../../Components/Loader/Loader';
 import ErrorMessage from '../../Components/ErrorMessage/ErrorMessage';
+
+const MovieList = lazy(() => import('../../Components/MovieList/MovieList'));
 
 export default function HomePages() {
   const [trending, setTrending] = useState([]);
@@ -14,7 +15,7 @@ export default function HomePages() {
       try {
         setIsLoader(true);
         setIsError(false);
-        const { results } = await getTrendingmovies();
+        const results = await getTrendingmovies();
         setTrending(results);
       } catch (error) {
         setIsError(true);
