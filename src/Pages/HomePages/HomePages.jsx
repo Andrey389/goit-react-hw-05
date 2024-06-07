@@ -2,6 +2,7 @@ import { lazy, useEffect, useState } from 'react';
 import { getTrendingmovies } from '../../Api/Api';
 import Loader from '../../Components/Loader/Loader';
 import ErrorMessage from '../../Components/ErrorMessage/ErrorMessage';
+import css from './HomePages.module.css';
 
 const MovieList = lazy(() => import('../../Components/MovieList/MovieList'));
 
@@ -26,8 +27,8 @@ export default function HomePages() {
     fetchTrending();
   }, []);
   return (
-    <div>
-      <h1>Trending today !</h1>
+    <div className={css.container}>
+      <h1 className={css.title}>Trending today !</h1>
       {isLoader && <Loader />}
       {trending.length > 0 && <MovieList movies={trending} />}
       {isError && <ErrorMessage />}
