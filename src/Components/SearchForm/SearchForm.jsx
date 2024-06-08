@@ -19,7 +19,7 @@ export default function SearchForm({ onSearch }) {
           className={css.textInput}
           type="text"
           name="query"
-          placeholder="Search images and photos"
+          placeholder="Search film"
           autoComplete="off"
           autoFocus
         />
