@@ -6,14 +6,13 @@ import MovieList from '../../Components/MovieList/MovieList';
 import Loader from '../../Components/Loader/Loader';
 import ErrorMessage from '../../Components/ErrorMessage/ErrorMessage';
 import SearchForm from '../../Components/SearchForm/SearchForm';
-// import SearchForm from '../../Components/SearchForm/SearchForm';
 
 export default function MoviesPages() {
   const [searhMovie, setSearchMovie] = useState([]);
   const [isLoadet, setIsLoader] = useState(false);
   const [isError, setIsError] = useState(false);
-  const [serchParams, setSearchParams] = useState();
-  const queryMovie = useSearchParams.get(query) ?? '';
+  const [serchParam, setSearchParam] = useSearchParams();
+  const queryMovie = serchParam.get('query') ?? '';
 
   useEffect(() => {
     async function fetchSearch() {
@@ -35,8 +34,8 @@ export default function MoviesPages() {
   }, [queryMovie]);
 
   const heandleSearch = async query => {
-    serchParams.set('query', query);
-    setSearchParams(serchParams);
+    serchParam.set('query', query);
+    setSearchParam(serchParam);
     setSearchMovie([]);
   };
 
