@@ -43,7 +43,7 @@ export default function MoviesPages() {
     <div>
       <SearchForm onSearch={heandleSearch} />
       {isLoadet && <Loader />}
-      {searhMovie.length > 0 && <MovieList movie={searhMovie} />}
+      {searhMovie.length > 0 && <MovieList movies={searhMovie} />}
       {isError && <ErrorMessage />}
     </div>
   );

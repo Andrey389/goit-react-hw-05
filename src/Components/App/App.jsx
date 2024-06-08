@@ -1,17 +1,24 @@
 import { Route, Routes } from 'react-router-dom';
-import Navigation from '../Navigation/Navigation';
+import { lazy, Suspense } from 'react';
 
-import HomePages from '../../Pages/HomePages/HomePages';
-import MoviesPages from '../../Pages/MoviesPages/MoviesPages';
+const Navigation = lazy(() => import('../Navigation/Navigation'));
+const HomePages = lazy(() => import('../../Pages/HomePages/HomePages'));
+const MoviesPages = lazy(() => import('../../Pages/MoviesPages/MoviesPages'));
+const MovieDetalisPages = lazy(() =>
+  import('../../Pages/MovieDetalisPages/MovieDetalisPage')
+);
 
 export default function App() {
   return (
     <div>
-      <Navigation />
-      <Routes>
-        <Route path="/" element={<HomePages />} />
-        <Route path="/movies" element={<MoviesPages />} />
-      </Routes>
+      <Suspense>
+        <Navigation />
+        <Routes>
+          <Route path="/" element={<HomePages />} />
+          <Route path="/movies" element={<MoviesPages />} />
+          <Route path="/movies/:movieId" element={<MovieDetalisPages />} />
+        </Routes>
+      </Suspense>
     </div>
   );
 }

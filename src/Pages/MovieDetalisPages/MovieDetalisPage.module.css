@@ -1,0 +1,22 @@
+.container {
+  margin: 20px;
+}
+
+.btnLink {
+  text-decoration: none;
+}
+
+.btnLink:hover,
+.btnLink:focus {
+  color: red;
+}
+
+.title {
+  margin-bottom: 20px;
+}
+
+.ulLink {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
