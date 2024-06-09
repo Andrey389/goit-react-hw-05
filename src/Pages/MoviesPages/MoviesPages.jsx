@@ -1,11 +1,11 @@
 import { useEffect, useState } from 'react';
 import { useSearchParams } from 'react-router-dom';
-import { getSearchmovie } from '../../Api/Api';
+import { getSearchmovie } from '../../api/Api';
 
-import MovieList from '../../Components/MovieList/MovieList';
-import Loader from '../../Components/Loader/Loader';
-import ErrorMessage from '../../Components/ErrorMessage/ErrorMessage';
-import SearchForm from '../../Components/SearchForm/SearchForm';
+import MovieList from '../../components/MovieList/MovieList';
+import Loader from '../../components/Loader/Loader';
+import ErrorMessage from '../../components/ErrorMessage/ErrorMessage';
+import SearchForm from '../../components/SearchForm/SearchForm';
 
 export default function MoviesPages() {
   const [searhMovie, setSearchMovie] = useState([]);
