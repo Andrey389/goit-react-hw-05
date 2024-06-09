@@ -1,0 +1,10 @@
+.castUl {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.castLi {
+  width: 200px;
+  margin: 5px;
+}

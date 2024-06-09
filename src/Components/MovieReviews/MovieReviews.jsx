@@ -2,12 +2,12 @@ import { useParams } from 'react-router-dom';
 import { getMoviereviews } from '../../Api/Api';
 import { useState, useEffect } from 'react';
 
-export default function MovieCast() {
+export default function MovieReviews() {
   const { movieId } = useParams();
   const [reviews, setReviews] = useState([]);
 
   useEffect(() => {
-    const getMovieCast = async () => {
+    const getMovieReviews = async () => {
       try {
         const dataReview = await getMoviereviews(movieId);
         setReviews(dataReview);
@@ -15,7 +15,7 @@ export default function MovieCast() {
         console.log(error);
       }
     };
-    getMovieCast();
+    getMovieReviews();
   }, [movieId]);
   return (
     <ul>
