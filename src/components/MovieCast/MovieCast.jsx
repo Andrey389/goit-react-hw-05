@@ -1,5 +1,5 @@
 import { useParams } from 'react-router-dom';
-import { getMoviecredits } from '../../bbbbbb/Api';
+import { getMoviecredits } from '../../api/Api';
 import { useState, useEffect } from 'react';
 
 import css from './MovieCast.module.css';
