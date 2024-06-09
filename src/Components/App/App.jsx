@@ -7,10 +7,8 @@ const MoviesPages = lazy(() => import('../../Pages/MoviesPages/MoviesPages'));
 const MovieDetalisPages = lazy(() =>
   import('../../Pages/MovieDetalisPages/MovieDetalisPage')
 );
-const MovieCast = lazy(() => import('../../Components/MovieCast/MovieCast'));
-const MovieReviews = lazy(() =>
-  import('../../Components/MovieReviews/MovieReviews')
-);
+const MovieCast = lazy(() => import('../MovieCast/MovieCast'));
+const MovieReviews = lazy(() => import('../MovieReviews/MovieReviews'));
 const NotPages = lazy(() => import('../../Components/NotPages/NotPages'));
 
 export default function App() {
