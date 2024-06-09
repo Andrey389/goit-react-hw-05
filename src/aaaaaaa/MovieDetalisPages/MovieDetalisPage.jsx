@@ -1,11 +1,11 @@
 import { Suspense, lazy, useEffect, useRef, useState } from 'react';
 import { Link, Outlet, useLocation, useParams } from 'react-router-dom';
-import { getMoviedetails } from '../../api/Api';
-import Loader from '../../components/Loader/Loader';
+import { getMoviedetails } from '../../bbbbbb/Api';
+import Loader from '../../cccccccc/Loader/Loader';
 
 import css from './MovieDetalisPage.module.css';
 
-const MovieFilm = lazy(() => import('../../components/MovieFilm/MovieFilm'));
+const MovieFilm = lazy(() => import('../../cccccccc/MovieFilm/MovieFilm'));
 
 export default function MovieDetalisPage() {
   const { movieId } = useParams();

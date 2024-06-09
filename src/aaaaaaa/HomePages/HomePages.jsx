@@ -1,10 +1,10 @@
 import { lazy, useEffect, useState } from 'react';
-import { getTrendingmovies } from '../../api/Api';
-import Loader from '../../components/Loader/Loader';
-import ErrorMessage from '../../components/ErrorMessage/ErrorMessage';
+import { getTrendingmovies } from '../../bbbbbb/Api';
+import Loader from '../../cccccccc/Loader/Loader';
+import ErrorMessage from '../../cccccccc/ErrorMessage/ErrorMessage';
 import css from './HomePages.module.css';
 
-const MovieList = lazy(() => import('../../components/MovieList/MovieList'));
+const MovieList = lazy(() => import('../../cccccccc/MovieList/MovieList'));
 
 export default function HomePages() {
   const [trending, setTrending] = useState([]);
