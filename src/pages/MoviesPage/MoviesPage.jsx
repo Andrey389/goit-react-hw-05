@@ -7,7 +7,7 @@ import Loader from '../../components/Loader/Loader';
 import ErrorMessage from '../../components/ErrorMessage/ErrorMessage';
 import SearchForm from '../../components/SearchForm/SearchForm';
 
-export default function MoviesPages() {
+export default function MoviesPage() {
   const [searhMovie, setSearchMovie] = useState([]);
   const [isLoadet, setIsLoader] = useState(false);
   const [isError, setIsError] = useState(false);

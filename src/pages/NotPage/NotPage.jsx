@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
-import css from './NotPages.module.css';
+import css from './NotPage.module.css';
 
-export default function NotPages() {
+export default function NotPage() {
   return (
     <div className={css.text}>
       <p>

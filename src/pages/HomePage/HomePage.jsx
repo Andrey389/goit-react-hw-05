@@ -2,11 +2,11 @@ import { lazy, useEffect, useState } from 'react';
 import { getTrendingmovies } from '../../api/Api';
 import Loader from '../../components/Loader/Loader';
 import ErrorMessage from '../../components/ErrorMessage/ErrorMessage';
-import css from './HomePages.module.css';
+import css from './HomePage.module.css';
 
 const MovieList = lazy(() => import('../../components/MovieList/MovieList'));
 
-export default function HomePages() {
+export default function HomePage() {
   const [trending, setTrending] = useState([]);
   const [isLoader, setIsLoader] = useState(false);
   const [isError, setIsError] = useState(false);
